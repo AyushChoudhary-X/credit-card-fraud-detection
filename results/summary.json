@@ -1,0 +1,134 @@
+{
+  "dataset": {
+    "rows": 284807,
+    "frauds": 492,
+    "fraud_rate": 0.001727485630620034,
+    "split_rows": [
+      170884,
+      56961,
+      56962
+    ],
+    "split_frauds": [
+      360,
+      57,
+      75
+    ]
+  },
+  "final_model": {
+    "model": "random_forest",
+    "strategy": "smote",
+    "val_pr_auc": 0.773028513473615,
+    "test_pr_auc": 0.8053452764878176,
+    "test_roc_auc": 0.9786667135432231,
+    "test_pr_auc_ci95": [
+      0.7093633738874905,
+      0.8800966771474147
+    ]
+  },
+  "always_legit_accuracy": 0.9986833327481479,
+  "operating_points_test": {
+    "max_f1": {
+      "threshold": 0.6610553840259084,
+      "precision": 0.8888888888888888,
+      "recall": 0.7466666666666667,
+      "f1": 0.8115942028985508,
+      "alerts": 63,
+      "tp": 56,
+      "fp": 7,
+      "fn": 19,
+      "tn": 56880
+    },
+    "precision_90": {
+      "threshold": 0.6610553840259084,
+      "precision": 0.8888888888888888,
+      "recall": 0.7466666666666667,
+      "f1": 0.8115942028985508,
+      "alerts": 63,
+      "tp": 56,
+      "fp": 7,
+      "fn": 19,
+      "tn": 56880,
+      "precision_ci95": [
+        0.7962962962962963,
+        0.9621911922663801
+      ],
+      "recall_ci95": [
+        0.6408153044871795,
+        0.8354633360193393
+      ]
+    },
+    "cost_optimal": {
+      "threshold": 0.3299077601178505,
+      "precision": 0.4397163120567376,
+      "recall": 0.8266666666666667,
+      "f1": 0.5740740740740741,
+      "alerts": 141,
+      "tp": 62,
+      "fp": 79,
+      "fn": 13,
+      "tn": 56808
+    }
+  },
+  "cost_analysis_test": {
+    "cost_per_false_alert": 5.0,
+    "total_fraud_amount_in_test": 7729.26,
+    "no_model": {
+      "missed_fraud_cost": 7729.26,
+      "false_alert_cost": 0.0,
+      "total_cost": 7729.26
+    },
+    "flag_everything": {
+      "missed_fraud_cost": 0.0,
+      "false_alert_cost": 284435.0,
+      "total_cost": 284435.0
+    },
+    "cost_optimal_model": {
+      "missed_fraud_cost": 1756.43,
+      "false_alert_cost": 395.0,
+      "total_cost": 2151.4300000000003
+    },
+    "savings_vs_no_model": 5577.83
+  },
+  "top_features": [
+    {
+      "feature": "V14",
+      "importance": 0.03322390422641659
+    },
+    {
+      "feature": "V4",
+      "importance": 0.030390386714905106
+    },
+    {
+      "feature": "V12",
+      "importance": 0.012147862831369616
+    },
+    {
+      "feature": "V19",
+      "importance": 0.005861332610549308
+    },
+    {
+      "feature": "V17",
+      "importance": 0.005826458207428731
+    },
+    {
+      "feature": "log_amount",
+      "importance": 0.004881185670034971
+    },
+    {
+      "feature": "V10",
+      "importance": 0.004850141765852278
+    },
+    {
+      "feature": "V3",
+      "importance": 0.004664930326105399
+    },
+    {
+      "feature": "V11",
+      "importance": 0.003956519893209887
+    },
+    {
+      "feature": "V7",
+      "importance": 0.0036177450480385565
+    }
+  ]
+}
